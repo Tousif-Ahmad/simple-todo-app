@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+.container{
+    background-color: rgb(222, 213, 213);
+    max-width: 35rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0, 0, 10px, rgba(0, 0, 0, 0.248);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 10px;
+}
+.addContainer{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+
+}
+.addContainer > input{
+    padding: 10px;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 5px;
+}
+.addContainer > button{
+    padding: 0px 20px;
+    background-color: lightseagreen;
+    border-radius: 5px;
+    border: none;
+    transition: all linear 0.3s;
+}
+.addContainer > button:active{
+    scale : 0.9
+}
+.listContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.listContainer .list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 8px;
+    border-radius: 7px;
+    /* margin: 7px 0px; */
+}
+.list .delBtn{
+    padding: 6px;
+}
