@@ -1,64 +1,120 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html,body{
-    height: 100%;
-    width: 100%;
-    font-family: sans-serif;
-}
-.container{
-    background-color: rgb(222, 213, 213);
-    max-width: 35rem;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0, 0, 10px, rgba(0, 0, 0, 0.248);
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 30px 10px;
-}
-.addContainer{
-    display: flex;
-    width: 100%;
-    gap: 10px;
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
-.addContainer > input{
-    padding: 10px;
-    border: 1px solid black;
-    width: 100%;
-    border-radius: 5px;
-}
-.addContainer > button{
-    padding: 0px 20px;
-    background-color: lightseagreen;
-    border-radius: 5px;
-    border: none;
-    transition: all linear 0.3s;
-}
-.addContainer > button:active{
-    scale : 0.9
-}
-.listContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.listContainer .list{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: aliceblue;
-    padding: 8px;
-    border-radius: 7px;
-    /* margin: 7px 0px; */
-}
-.list .delBtn{
-    padding: 6px;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .addInput {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .addInput:focus {
+            border-color: #667eea;
+        }
+
+        .addBtn {
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .addBtn:hover {
+            background: #5568d3;
+        }
+
+        .addBtn:active {
+            transform: scale(0.98);
+        }
+
+        .listContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .list:hover {
+            background: #f0f1f3;
+            transform: translateX(5px);
+        }
+
+        .list p {
+            color: #333;
+            font-size: 16px;
+            flex: 1;
+            word-break: break-word;
+        }
+
+        .list button {
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px 10px;
+            transition: transform 0.2s;
+        }
+
+        .list button:hover {
+            transform: scale(1.2);
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #999;
+            padding: 40px 20px;
+            font-size: 16px;
+        }
